@@ -4,13 +4,14 @@ import userRoutes from "./routes/user.routes.js";
 import ticketRoutes from "./routes/ticket.routes.js";
 import { ApiError } from "./utils/ApiError.js";
 import { ApiResponse } from "./utils/ApiResponse.js";
-
+import screenRoutes from "./routes/screen.routes.js";
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
 
+app.use("/", screenRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/tickets", ticketRoutes);
 

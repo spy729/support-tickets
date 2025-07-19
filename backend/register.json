@@ -1,0 +1,8 @@
+{
+  "logisticsco": [
+    { "name": "Support Tickets", "url": "/support-tickets" }
+  ],
+  "retailgmbh": [
+    { "name": "Order Tracker", "url": "/order-tracker" }
+  ]
+}

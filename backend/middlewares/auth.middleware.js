@@ -18,7 +18,13 @@ const authMiddleware = AsyncHandler(async (req, res, next) => {
     throw new ApiError(401, "Unauthorized: Invalid or inactive user");
   }
 
-  req.user = user;
+  req.user = {
+    id: user._id,
+    role: user.role,
+    customerId: user.customerId, // this enables tenant-aware filtering
+    email: user.email,
+  };
+
   next();
 });
 
